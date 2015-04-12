@@ -1,0 +1,1 @@
+C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort\bin\Debug\GlobalX.Console.ContactSort.exe.config
