@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GlobalX.Console.ContactSort.BusinessLogic
+namespace GlobalX.Console.ContactSort.Services
 {
-    public class Class1
+    public interface IContactService
     {
     }
 }

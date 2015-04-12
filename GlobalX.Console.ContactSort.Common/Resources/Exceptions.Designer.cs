@@ -22,7 +22,7 @@ namespace GlobalX.Console.ContactSort.Common.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Exceptions {
+    public class Exceptions {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace GlobalX.Console.ContactSort.Common.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GlobalX.Console.ContactSort.Common.Resources.Exceptions", typeof(Exceptions).Assembly);
@@ -51,12 +51,39 @@ namespace GlobalX.Console.ContactSort.Common.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The maximum file amount has been exceeded (1)..
+        /// </summary>
+        public static string CONSOLE_FILE_AMOUNT_EXCEEDED {
+            get {
+                return ResourceManager.GetString("CONSOLE_FILE_AMOUNT_EXCEEDED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The file path is expected for this process..
+        /// </summary>
+        public static string CONSOLE_FILE_INPUT_EXPECTED {
+            get {
+                return ResourceManager.GetString("CONSOLE_FILE_INPUT_EXPECTED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unexpected class type..
+        /// </summary>
+        public static string UNEXPECTED_TYPE {
+            get {
+                return ResourceManager.GetString("UNEXPECTED_TYPE", resourceCulture);
             }
         }
     }

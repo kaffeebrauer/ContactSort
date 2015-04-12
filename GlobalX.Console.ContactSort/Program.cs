@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Autofac;
+using GlobalX.Console.ContactSort.Infrastructure;
+using log4net;
 
 namespace GlobalX.Console.ContactSort
 {
@@ -12,6 +12,7 @@ namespace GlobalX.Console.ContactSort
 
         public static void Main(string[] args)
         {
+            _container = IoC.CreateContainer();
         }
     }
 }

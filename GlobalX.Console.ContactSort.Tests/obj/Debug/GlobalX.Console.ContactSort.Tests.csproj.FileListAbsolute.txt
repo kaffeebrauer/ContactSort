@@ -1,0 +1,6 @@
+C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Tests\bin\Debug\GlobalX.Console.ContactSort.Tests.dll
+C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Tests\bin\Debug\GlobalX.Console.ContactSort.Tests.pdb
+C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Tests\bin\Debug\nunit.framework.dll
+C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Tests\bin\Debug\nunit.framework.xml
+C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Tests\obj\Debug\GlobalX.Console.ContactSort.Tests.dll
+C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Tests\obj\Debug\GlobalX.Console.ContactSort.Tests.pdb
