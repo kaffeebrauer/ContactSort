@@ -1,7 +1,6 @@
 ﻿using Autofac;
 using GlobalX.Console.ContactSort.BusinessLogic.Core;
 using GlobalX.Console.ContactSort.Modules;
-using GlobalX.Console.ContactSort.Services;
 
 namespace GlobalX.Console.ContactSort.Infrastructure
 {
@@ -14,6 +13,7 @@ namespace GlobalX.Console.ContactSort.Infrastructure
             builder.RegisterModule<MainModule>();
             builder.RegisterModule<ServiceModule>();
             builder.RegisterModule<LoggingModule>();
+            builder.RegisterModule<BusinessLogicModule>();
             builder.RegisterAssemblyTypes(typeof(ContactModelFactory).Assembly)
                 .InstancePerLifetimeScope();
             builder.RegisterAssemblyTypes(typeof(ContactModelFactory).Assembly)

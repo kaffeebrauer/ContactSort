@@ -45,8 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contact\ContactBusinessLogic.cs" />
+    <Compile Include="Contact\IContactBusinessLogic.cs" />
     <Compile Include="Core\ContactModelFactory.cs" />
     <Compile Include="Core\ModelFactory.cs" />
+    <Compile Include="File\FileBusinessLogic.cs" />
+    <Compile Include="File\IFileBusinessLogic.cs" />
     <Compile Include="Infrastructure\IMapperService.cs" />
     <Compile Include="Infrastructure\MapperService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,10 +59,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contact\" />
-    <Folder Include="File\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\GlobalX.Console.ContactSort.Common\GlobalX.Console.ContactSort.Common.csproj">
       <Project>{a367933e-0543-4b3a-b795-e7ecf9cc85d6}</Project>
