@@ -19,7 +19,8 @@ namespace GlobalX.Console.ContactSort.Infrastructure
             builder.RegisterAssemblyTypes(typeof(ContactModelFactory).Assembly)
                 .InstancePerLifetimeScope();
             builder.RegisterType<AutofacEventBroker>().As<IEventBroker>().SingleInstance();
-            builder.RegisterType<ConsoleOutputWriter>().As<IOutputWriter>().SingleInstance();
+            builder.RegisterType<ContactRegisteredEvent>().As<IDomainEvent>();
+            builder.RegisterType<ConsoleOutputWriter>().As<IOutputWriter>();
             builder.RegisterAssemblyTypes(typeof(ContactModelFactory).Assembly)
                 .AsClosedTypesOf(typeof(ModelFactory<>))
                 .InstancePerLifetimeScope();
