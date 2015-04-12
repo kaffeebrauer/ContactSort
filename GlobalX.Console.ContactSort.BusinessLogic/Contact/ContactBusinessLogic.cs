@@ -1,23 +1,27 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using GlobalX.Console.ContactSort.BusinessLogic.Core;
 using GlobalX.Console.ContactSort.Common.DataTransferObjects;
 
 namespace GlobalX.Console.ContactSort.BusinessLogic.Contact
 {
     public class ContactBusinessLogic : IContactBusinessLogic
     {
-        public ContactBusinessLogic()
+        private readonly ContactModelFactory _contactModelFactory;
+        public ContactBusinessLogic(ContactModelFactory contactModelFactory)
         {
-            
+            _contactModelFactory = contactModelFactory;
         }
 
-        public Common.Domain.Contact LoadContact(ContactDataTransferObject contact)
+        public Common.Domain.Contact LoadContact(ContactDataTransferObject contactDto)
         {
-            throw new System.NotImplementedException();
+            var contact = _contactModelFactory.Create(contactDto);
+            return contact;
         }
 
-        public IList<Common.Domain.Contact> ArrangeContact(IList<Common.Domain.Contact> contacts)
+        public IList<ContactDataTransferObject> ArrangeContact(IList<ContactDataTransferObject> contacts)
         {
-            throw new System.NotImplementedException();
+            return contacts.OrderBy(c => c.LastName).ThenBy(c => c.FirstName).ToList();
         }
     }
 }

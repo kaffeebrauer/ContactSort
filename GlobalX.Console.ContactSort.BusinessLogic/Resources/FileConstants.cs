@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GlobalX.Console.ContactSort.BusinessLogic.Resources
+﻿namespace GlobalX.Console.ContactSort.BusinessLogic.Resources
 {
-    class FileConstants
+    public class FileConstants
     {
+        public static string[] CarriageReturn = { "\n", "\r\n" };
     }
 }

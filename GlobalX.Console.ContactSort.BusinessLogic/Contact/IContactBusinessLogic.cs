@@ -8,6 +8,6 @@ namespace GlobalX.Console.ContactSort.BusinessLogic.Contact
     {
         Common.Domain.Contact LoadContact(ContactDataTransferObject contact);
 
-        IList<Common.Domain.Contact> ArrangeContact(IList<Common.Domain.Contact> contacts);
+        IList<ContactDataTransferObject> ArrangeContact(IList<ContactDataTransferObject> contacts);
     }
 }

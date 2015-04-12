@@ -1,5 +1,7 @@
 ﻿using Autofac;
 using GlobalX.Console.ContactSort.BusinessLogic.Core;
+using GlobalX.Console.ContactSort.Common.Console;
+using GlobalX.Console.ContactSort.Common.Domain.Events;
 using GlobalX.Console.ContactSort.Modules;
 
 namespace GlobalX.Console.ContactSort.Infrastructure
@@ -16,6 +18,8 @@ namespace GlobalX.Console.ContactSort.Infrastructure
             builder.RegisterModule<BusinessLogicModule>();
             builder.RegisterAssemblyTypes(typeof(ContactModelFactory).Assembly)
                 .InstancePerLifetimeScope();
+            builder.RegisterType<AutofacEventBroker>().As<IEventBroker>().SingleInstance();
+            builder.RegisterType<ConsoleOutputWriter>().As<IOutputWriter>().SingleInstance();
             builder.RegisterAssemblyTypes(typeof(ContactModelFactory).Assembly)
                 .AsClosedTypesOf(typeof(ModelFactory<>))
                 .InstancePerLifetimeScope();

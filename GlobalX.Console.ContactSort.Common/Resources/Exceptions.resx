@@ -123,6 +123,9 @@
   <data name="CONSOLE_FILE_INPUT_EXPECTED" xml:space="preserve">
     <value>The file path is expected for this process.</value>
   </data>
+  <data name="FILE_EXTENSION_EXPECTED" xml:space="preserve">
+    <value>File extension for file expected.</value>
+  </data>
   <data name="UNEXPECTED_TYPE" xml:space="preserve">
     <value>Unexpected class type.</value>
   </data>

@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -53,11 +56,32 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="BusinessLogic\ContactBusinessLogicTest.cs" />
+    <Compile Include="BusinessLogic\FileBusinessLogicTest.cs" />
+    <Compile Include="ContactManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalX.Console.ContactSort.BusinessLogic\GlobalX.Console.ContactSort.BusinessLogic.csproj">
+      <Project>{9613DFBA-7486-42D7-AD0A-66A8DD9B48CC}</Project>
+      <Name>GlobalX.Console.ContactSort.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalX.Console.ContactSort.Common\GlobalX.Console.ContactSort.Common.csproj">
+      <Project>{A367933E-0543-4B3A-B795-E7ECF9CC85D6}</Project>
+      <Name>GlobalX.Console.ContactSort.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.csproj">
+      <Project>{E00146A8-2CAA-488B-A42F-28B685414B70}</Project>
+      <Name>GlobalX.Console.ContactSort</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestData\contact.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

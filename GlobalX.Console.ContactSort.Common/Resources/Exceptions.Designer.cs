@@ -79,6 +79,15 @@ namespace GlobalX.Console.ContactSort.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File extension for file expected..
+        /// </summary>
+        public static string FILE_EXTENSION_EXPECTED {
+            get {
+                return ResourceManager.GetString("FILE_EXTENSION_EXPECTED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unexpected class type..
         /// </summary>
         public static string UNEXPECTED_TYPE {

@@ -61,7 +61,7 @@ namespace GlobalX.Console.ContactSort.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Finished: created {0}.
+        ///   Looks up a localized string similar to Finished: created.
         /// </summary>
         internal static string CONSOLE_PROCESS_COMPLETED {
             get {

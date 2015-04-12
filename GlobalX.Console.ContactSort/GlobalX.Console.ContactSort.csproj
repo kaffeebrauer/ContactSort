@@ -53,8 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\ContactManager.cs" />
+    <Compile Include="Application\IApplication.cs" />
     <Compile Include="Exceptions\GlobalXConsoleException.cs" />
-    <Compile Include="Infrastructure\Constants.cs" />
     <Compile Include="Infrastructure\IoC.cs" />
     <Compile Include="Modules\BusinessLogicModule.cs" />
     <Compile Include="Modules\LoggingModule.cs" />
@@ -90,6 +91,11 @@
     <EmbeddedResource Include="Resources\ConsoleMessage.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ConsoleMessage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="contact.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

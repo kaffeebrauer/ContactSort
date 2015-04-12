@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,8 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Console\ConsoleOutputWriter.cs" />
+    <Compile Include="Console\IOutputWriter.cs" />
     <Compile Include="DataTransferObjects\ContactDataTransferObject.cs" />
     <Compile Include="Domain\Contact.cs" />
+    <Compile Include="Domain\Events\AutofacEventBroker.cs" />
+    <Compile Include="Domain\Events\ContactRegisteredEvent.cs" />
+    <Compile Include="Domain\Events\IDomainEvent.cs" />
+    <Compile Include="Domain\Events\IEventBroker.cs" />
+    <Compile Include="Domain\Events\IHandle.cs" />
     <Compile Include="Domain\File.cs" />
     <Compile Include="Exceptions\GlobalXException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +65,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Exceptions.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Linq;
 using Autofac;
+using GlobalX.Console.ContactSort.Application;
 using GlobalX.Console.ContactSort.Exceptions;
 using GlobalX.Console.ContactSort.Infrastructure;
+using GlobalX.Console.ContactSort.Services;
 using log4net;
 
 namespace GlobalX.Console.ContactSort
@@ -25,7 +28,10 @@ namespace GlobalX.Console.ContactSort
             }
 
             var filePath = args[0];
+
             _container = IoC.CreateContainer();
+            var application = _container.Resolve<IApplication>();
+            application.RunApplication(filePath);
         }
 
         private static void ApplicationUnhandledExceptionEventHandler(object sender, UnhandledExceptionEventArgs e)
