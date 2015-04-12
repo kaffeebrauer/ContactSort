@@ -43,14 +43,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Console\ConsoleOutputWriter.cs" />
-    <Compile Include="Console\IOutputWriter.cs" />
+    <Compile Include="Console\IOutputWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DataTransferObjects\ContactDataTransferObject.cs" />
     <Compile Include="Domain\Contact.cs" />
-    <Compile Include="Domain\Events\AutofacEventBroker.cs" />
-    <Compile Include="Domain\Events\ContactRegisteredEvent.cs" />
-    <Compile Include="Domain\Events\IDomainEvent.cs" />
-    <Compile Include="Domain\Events\IEventBroker.cs" />
-    <Compile Include="Domain\Events\IHandle.cs" />
+    <Compile Include="Domain\Events\AutofacEventBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\Events\ContactRegisteredEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\Events\IDomainEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\Events\IEventBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\Events\IHandle.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Domain\File.cs" />
     <Compile Include="Exceptions\GlobalXException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

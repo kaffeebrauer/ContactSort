@@ -2,6 +2,7 @@
 
 namespace GlobalX.Console.ContactSort.Common.Exceptions
 {
+    [Serializable]
     public class GlobalXException : Exception
     {
         public GlobalXException()
