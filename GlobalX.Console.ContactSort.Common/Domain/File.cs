@@ -13,7 +13,7 @@ namespace GlobalX.Console.ContactSort.Common.Domain
 
         }
 
-        public string FileName { get; set; };
+        public string FileName { get; set; }
 
         public int FileSize { get; set; }
         
