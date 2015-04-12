@@ -3,9 +3,11 @@ using GlobalX.Console.ContactSort.Application;
 using GlobalX.Console.ContactSort.Common.Console;
 using GlobalX.Console.ContactSort.Common.DataTransferObjects;
 using GlobalX.Console.ContactSort.Common.Domain;
+using GlobalX.Console.ContactSort.Configuration;
 using GlobalX.Console.ContactSort.Services;
 using Moq;
 using NUnit.Framework;
+using TestStack.BDDfy;
 
 namespace GlobalX.Console.ContactSort.Tests
 {
@@ -16,8 +18,9 @@ namespace GlobalX.Console.ContactSort.Tests
         private Mock<IFileService> _fileService;
         private Mock<IContactService> _contactService;
         private Mock<IOutputWriter> _outputWritter;
+        private Mock<IConfigurationSettingProvider> _configurationSettingProvider;
         private ContactManager _contactManager;
-        private Common.Domain.File contactFile;
+        private File contactFile;
 
         [SetUp]
         public void Setup()
@@ -25,8 +28,9 @@ namespace GlobalX.Console.ContactSort.Tests
             _fileService = new Mock<IFileService>();
             _contactService = new Mock<IContactService>();
             _outputWritter = new Mock<IOutputWriter>();
-            _contactManager = new ContactManager(_fileService.Object, _contactService.Object, _outputWritter.Object);
-            contactFile = new Common.Domain.File {ContentType = "txt", FileSize = 55, FileName = "contact"};
+            _configurationSettingProvider = new Mock<IConfigurationSettingProvider>();
+            _contactManager = new ContactManager(_fileService.Object, _contactService.Object, _outputWritter.Object, _configurationSettingProvider.Object);
+            contactFile = new File {ContentType = "txt", FileSize = 55, FileName = "contact"};
         }
 
         [Test]
@@ -38,8 +42,9 @@ namespace GlobalX.Console.ContactSort.Tests
             _fileService.Setup(fs => fs.ArrangeLineItems(It.IsAny<string>())).Returns(new List<string>() {});
             _contactService.Setup(cs => cs.ArrangeContact(It.IsAny<List<ContactDataTransferObject>>()))
                 .Returns(new List<ContactDataTransferObject>());
-            _fileService.Setup(fs => fs.WriteFile(It.IsAny<Common.Domain.File>(), It.IsAny<List<Contact>>()))
+            _fileService.Setup(fs => fs.WriteFile(It.IsAny<File>(), It.IsAny<List<Contact>>()))
                 .Returns("contact-sorted.txt");
+            _configurationSettingProvider.Setup(csp => csp.DefaultCulture).Returns("en-AU");
             
             //Act
             _contactManager.RunApplication(filePath);
@@ -48,5 +53,6 @@ namespace GlobalX.Console.ContactSort.Tests
             _outputWritter.Verify(ow => ow.WriteLine(It.IsAny<string>()), Times.Exactly(1));
             _outputWritter.Verify(ow => ow.WriteLine(It.Is<string>(s => s == "Finished: created contact-sorted.txt")), Times.Exactly(1));
         }
+
     }
 }
