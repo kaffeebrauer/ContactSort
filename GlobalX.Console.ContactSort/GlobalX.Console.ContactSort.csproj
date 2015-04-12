@@ -53,8 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\ContactManager.cs" />
-    <Compile Include="Application\IApplication.cs" />
+    <Compile Include="Application\ContactManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Application\IApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Exceptions\GlobalXConsoleException.cs" />
     <Compile Include="Infrastructure\IoC.cs" />
     <Compile Include="Modules\BusinessLogicModule.cs" />
