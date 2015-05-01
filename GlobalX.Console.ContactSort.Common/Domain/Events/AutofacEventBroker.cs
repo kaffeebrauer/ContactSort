@@ -15,9 +15,8 @@ namespace GlobalX.Console.ContactSort.Common.Domain.Events
         {
             using (var scope = _lifetimeScope.BeginLifetimeScope())
             {
-                var handlers = scope.Resolve<IEnumerable<IHandle<T>>>();
-                foreach (var handler in handlers)
-                    handler.Handle(domainEvent);
+                var handlers = scope.Resolve<IEnumerable<IHandleEvents<T>>>();
+                foreach (var handler in handlers) handler.Handle(domainEvent);
             }
         }
     }

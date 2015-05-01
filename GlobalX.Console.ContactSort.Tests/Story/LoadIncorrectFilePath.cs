@@ -1,5 +1,4 @@
-﻿using System;
-using GlobalX.Console.ContactSort.Application;
+﻿using GlobalX.Console.ContactSort.Application;
 using GlobalX.Console.ContactSort.BusinessLogic.Contact;
 using GlobalX.Console.ContactSort.BusinessLogic.Core;
 using GlobalX.Console.ContactSort.BusinessLogic.File;
@@ -34,8 +33,8 @@ namespace GlobalX.Console.ContactSort.Tests.Story
         [Given("Given user enters a incorrect file path")]
         private void GivenUserEntersFilePath()
         {
-            _filePath = "invalidpath.txt";
             //Arrange
+            _filePath = "invalidpath.txt";
             _fileBusinessLogic = new FileBusinessLogic();
             _eventBroker = new Mock<IEventBroker>();
             _contactBusinessLogic = new ContactBusinessLogic(new ContactModelFactory(new MapperService(), _eventBroker.Object));

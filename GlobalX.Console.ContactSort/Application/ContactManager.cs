@@ -1,8 +1,5 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Linq;
-using System.Reflection;
-using System.Resources;
 using System.Threading;
 using GlobalX.Console.ContactSort.Common.Console;
 using GlobalX.Console.ContactSort.Configuration;
@@ -14,12 +11,19 @@ namespace GlobalX.Console.ContactSort.Application
     public class ContactManager : IApplication
     {
         private readonly IFileService _fileService;
+
         private readonly IContactService _contactService;
+
         private readonly IOutputWriter _outputWriter;
+
         private readonly IConfigurationSettingProvider _configurationSettingProvider;
+
         public bool IsFileAccessible { get; private set; }
+
         public bool IsFileSorted { get; private set; }
+
         public bool IsContactConstructed { get; private set; }
+
         public bool IsFileWritten { get; private set; }
 
         public ContactManager(

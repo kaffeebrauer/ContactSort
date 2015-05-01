@@ -24,7 +24,6 @@ namespace GlobalX.Console.ContactSort.Infrastructure
             builder.RegisterAssemblyTypes(typeof(ContactModelFactory).Assembly)
                 .AsClosedTypesOf(typeof(ModelFactory<>))
                 .InstancePerLifetimeScope();
-
             var container = builder.Build();
             return container;
         }

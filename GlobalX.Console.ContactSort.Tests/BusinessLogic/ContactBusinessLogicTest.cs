@@ -18,7 +18,6 @@ namespace GlobalX.Console.ContactSort.Tests.BusinessLogic
         private Mock<IMapperService> _mapperService;
         private Mock<IEventBroker> _eventBroker;
         private ContactBusinessLogic _contactBusinessLogic;
-        //private Mock<ContactModelFactory> _contactModelFactory;
         private List<ContactDataTransferObject> _rawContactData;
         private Mock<IOutputWriter> _outputWriter;
 
@@ -36,8 +35,10 @@ namespace GlobalX.Console.ContactSort.Tests.BusinessLogic
         {
             //Arrange
             var dto = new ContactDataTransferObject("SMITH", "JOHN");
-            _contactBusinessLogic = new ContactBusinessLogic(new ContactModelFactory(_mapperService.Object, _eventBroker.Object));
-            _mapperService.Setup(ms => ms.Map<ContactDataTransferObject, Contact>(dto)).Returns(new Contact() { FirstName = "JOHN", LastName = "SMITH" });
+            _contactBusinessLogic =
+                new ContactBusinessLogic(new ContactModelFactory(_mapperService.Object, _eventBroker.Object));
+            _mapperService.Setup(ms => ms.Map<ContactDataTransferObject, Contact>(dto))
+                .Returns(new Contact() {FirstName = "JOHN", LastName = "SMITH"});
             _eventBroker.Setup(x => x.Raise(new ContactRegisteredEvent(_outputWriter.Object)));
             _outputWriter.Setup(x => x.WriteLine(It.IsAny<string>()));
 

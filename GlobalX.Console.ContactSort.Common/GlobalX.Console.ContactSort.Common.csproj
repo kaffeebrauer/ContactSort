@@ -60,7 +60,7 @@
     <Compile Include="Domain\Events\IEventBroker.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Domain\Events\IHandle.cs">
+    <Compile Include="Domain\Events\IHandleEvent.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Domain\File.cs" />

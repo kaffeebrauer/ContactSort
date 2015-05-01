@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
+﻿using System.Collections.Generic;
 using GlobalX.Console.ContactSort.BusinessLogic.File;
 using GlobalX.Console.ContactSort.Common.Domain;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using Assert = NUnit.Framework.Assert;
 using File = GlobalX.Console.ContactSort.Common.Domain.File;
@@ -54,19 +49,12 @@ namespace GlobalX.Console.ContactSort.Tests.BusinessLogic
             //Arrange
             
             //Act
-            var result = _fileBusinessLogic.WriteFile(new File() {FileName = "contact", ContentType = ".txt"},
+            var result = _fileBusinessLogic.WriteFile(new File {FileName = "contact", ContentType = ".txt"},
                 new List<Contact>());
             
             //Assert
             Assert.IsTrue(result == "contact-sorted.txt");
         }
-        //static string GetTestDataFolder(string testDataFolder)
-        //{
-        //    string startupPath = Assembly.GetCallingAssembly().assembly.GetManifestResourceStream(resourceName);
-        //    var pathItems = startupPath.Split(Path.DirectorySeparatorChar);
-        //    string projectPath = String.Join(Path.DirectorySeparatorChar.ToString(), pathItems.Take(pathItems.Length - 3));
-        //    return Path.Combine(projectPath, testDataFolder);
-        //}
 
         [Test]
         public void WhenGivenFileWillGenerateProperFileMetadata()
@@ -74,7 +62,6 @@ namespace GlobalX.Console.ContactSort.Tests.BusinessLogic
             //Arrange
 
             //Act
-            string path = AppDomain.CurrentDomain.BaseDirectory;
             var result = _fileBusinessLogic.GenerateFileMetadata("contact.txt");
 
             //Assert

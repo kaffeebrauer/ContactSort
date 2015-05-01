@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Linq;
 using Autofac;
 using GlobalX.Console.ContactSort.Application;
 using GlobalX.Console.ContactSort.Exceptions;
 using GlobalX.Console.ContactSort.Infrastructure;
-using GlobalX.Console.ContactSort.Services;
 using log4net;
 
 namespace GlobalX.Console.ContactSort
