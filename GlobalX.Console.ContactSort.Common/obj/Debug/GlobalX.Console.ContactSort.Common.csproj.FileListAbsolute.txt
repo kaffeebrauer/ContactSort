@@ -1,6 +1,0 @@
-C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Common\bin\Debug\GlobalX.Console.ContactSort.Common.dll
-C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Common\bin\Debug\GlobalX.Console.ContactSort.Common.pdb
-C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Common\obj\Debug\GlobalX.Console.ContactSort.Common.Resources.Exceptions.resources
-C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Common\obj\Debug\GlobalX.Console.ContactSort.Common.csproj.GenerateResource.Cache
-C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Common\obj\Debug\GlobalX.Console.ContactSort.Common.dll
-C:\GLOBALX_DEMO\GlobalX.Console.ContactSort\GlobalX.Console.ContactSort.Common\obj\Debug\GlobalX.Console.ContactSort.Common.pdb
